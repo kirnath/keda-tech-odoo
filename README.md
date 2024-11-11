@@ -4,7 +4,7 @@
 - --branch 14.0
 
 ## General Notes
-- To sort by type just insert **sort** parameters in url (eg. http://localhost/materials?sort=fabric)
+- To sort by type just insert **sort** parameters in url (eg. http://localhost:8069/materials?sort=fabric)
 
 - **keda_autotesting.py** Is testing endpoints with Python Requests
 
