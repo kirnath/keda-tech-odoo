@@ -13,5 +13,14 @@
 - **Adjust For Every VALID ID** both in raw testing and unittesting
 
 Both method is works.
+### Usage
+```bash
+python3 keda_autotesting.py
+```
+or
+```bash
+python3 keda_rawtesting.py
+```
 
+### Snippet from keda_autotesting.py
 ![Test Image](unittest.png)
