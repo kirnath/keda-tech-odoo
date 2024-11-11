@@ -6,9 +6,9 @@
 ## General Notes
 - To sort by type just insert **sort** parameters in url (eg. http://localhost/materials?sort=fabric)
 
-- **raw_testing.py** Is testing endpoints with Python Requests
+- **keda_autotesting.py** Is testing endpoints with Python Requests
 
-- **auto_testing.py** Is testing endpoints with Python Requests + Unittest
+- **keda_rawtesting.py** Is testing endpoints with Python Requests + Unittest
 ### Important
 - **Adjust For Every VALID ID** both in raw testing and unittesting
 
