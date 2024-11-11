@@ -1,0 +1,54 @@
+<odoo>
+  <data>
+    <!-- Define the menu -->
+    <menuitem id="menu_material_custom" name="Material Custom Module" sequence="10"/>
+    <menuitem id="menu_material_custom_sub" name="Material Custom" parent="menu_material_custom" sequence="20"/>
+
+    <!-- Define the form view -->
+    <record id="view_material_form" model="ir.ui.view">
+      <field name="name">material.custom.form</field>
+      <field name="model">material.custom</field>
+      <field name="arch" type="xml">
+        <form string="Registrasi Material">
+          <sheet>
+            <group>
+              <group name="Item Details" colspan="2">
+                <group>
+                  <field name="name"/>
+                  <field name="buy_price"/>
+                  <field name="type"/>
+                </group>
+                <group>
+                  <field name="code"/>
+                  <field name="related_supplier"/>
+                </group>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_material_tree" model="ir.ui.view">
+      <field name="name">material.custom.tree</field>
+      <field name="model">material.custom</field>
+      <field name="arch" type="xml">
+        <tree string="Material Custom" default_order="type">
+          <field name="name"/>
+          <field name="type"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Define the action -->
+    <record id="action_material_custom" model="ir.actions.act_window">
+      <field name="name">Material Custom</field>
+      <field name="res_model">material.custom</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="view_material_tree"/>
+    </record>
+
+    <!-- Link the action to the menu -->
+    <menuitem id="material_custom_action" name="Material Custom" parent="menu_material_custom_sub" action="action_material_custom" sequence="30"/>
+  </data>
+</odoo>
